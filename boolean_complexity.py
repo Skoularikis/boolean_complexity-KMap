@@ -337,22 +337,63 @@ else:
     pprint(actualFours)
     pprint(listAfterFours)
     pprint(listOfFoursCheckAlpabet)
+
+    actualOnes = []
     def findOnes():
         print('HERE GOES THE ONES if ANY')
 
 
     actualTwos = []
+    actualLettersFortwos = []
     def findTwos():
-        print('a')
+        f = []
+        countf = []
+        for r in listAfterFours:
+            print()
+            for index in range(len(tableoftruth)):
+
+                for indexOfRow, arrayRow, in enumerate([row[index] for row in tableoftruth]):
+                    if arrayRow != r:
+                        if arrayRow[2:4] == r[2:4]:
+                            if (arrayRow in listAfterFours):
+                                print('row in remList   ', arrayRow, r, )
+                                f.append(arrayRow)
+            print(f)
+            af = []
+            if len(f) == 2:
+                for ia in range(0, 2):
+                    for a in [[row[ia] for row in f]]:
+                        countf.append(a.count(a[ia]))
+                        if a.count(a[ia]) == 2:
+                            af.append([ia, a[ia]])
+                print(countf, af)
+                if countf.count(2) >= 2:
+                    print('print accepted', f)
+                    actualLettersFortwos.append(af)
+                    print(listOfFoursCheckAlpabet)
+                    actualTwos.append(f)
+                    f = []
+                    countf = []
+                else:
+                    f = []
+                    countf = []
+        # print(remList, f)
+        f = []
+        if actualTwos != []:
+
+            for ia in range(len(actualTwos)):
+                # print(actualFours[ia])
+                for aq in range(len(actualTwos[ia])):
+                    del listAfterFours[listAfterFours.index(actualTwos[ia][aq])]
 
 
 
     if listAfterFours == []:
-        findOnes()
+        print('find letters')
     else:
         print('Find the diades')
-        findTwos()
-
+        # findTwos()
+        # print(actualTwos)
 
 
 
