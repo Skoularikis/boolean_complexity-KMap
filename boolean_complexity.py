@@ -121,73 +121,16 @@ else:
             pprint(colifInEight)
             sol.append(colifInEight)
             for eachCol in colifInEight:
-                # print([row[eachCol] for row in tableoftruth])
-                # for index in range(len([row[eachCol] for row in tableoftruth])):
-                #     print([row[eachCol] for row in tableoftruth][index])
-                #     for fq in [row[eachCol] for row in tableoftruth][index]:
-                #         print(fq)
                 testsol = testsol + tableoftruth[eachCol]
-            # testsol = [testsol]
-            # for i in range(len(colifInEight) - 1):
-            #     for a,b in zip(tableoftruth[colifInEight[i]],tableoftruth[colifInEight[i+1]]):
-            #         print('This is each row in truthTable',a,b)
-                    # testSol.ap
-                #
-                # for indexOfArray in range(len(tableoftruth[colifInEight[i]])):
-                #    print('columnwise,', [row[indexOfArray] for row in tableoftruth[colifInEight[i]]],
-                #           [row[indexOfArray] for row in tableoftruth[colifInEight[i + 1]]])
-                #     # testsol.append(a)
-                #     # testsol.append(b)
-                # print()
-                # for j in range(i+1,len(colifInEight)):
-                #     print(tableoftruth[colifInEight[i]][0],tableoftruth[colifInEight[j]][0])
-                #     if (tableoftruth[colifInEight[i]][0][0] == tableoftruth[colifInEight[j]][0][0]) or (tableoftruth[colifInEight[i]][0][1] == tableoftruth[colifInEight[j]][0][1]):
-                #         testsol.append([i,i+1])
+
 
             print()
-                    # if tableoftruth[colifInEight[i][0]] == tableoftruth[colifInEight[j][0]]
         elif len(rowifInEight) >= 2 and len(colifInEight) <= len(rowifInEight):
             print(rowifInEight)
             for eachRow in rowifInEight:
                 print(tableoftruth[eachRow])
                 testsol = testsol + tableoftruth[eachRow]
             sol.append(rowifInEight)
-            # for i in range(len(rowifInEight) - 1):
-            #     for a,b in zip(tableoftruth[rowifInEight[i]],tableoftruth[rowifInEight[i+1]]):
-            #         print('This is each row in truthTable',a,b)
-            #     print()
-            # for i in range(len(colifInEight)-1):
-            #     print()
-                # for indexOfArray in range(len(tableoftruth[colifInEight[i]])):
-                #     print([row[indexOfArray] for row in tableoftruth[colifInEight[i]]],[row[indexOfArray] for row in tableoftruth[colifInEight[i+1]]])
-                #     countColumn = len([j for j in [row[indexOfArray] for row in tableoftruth[colifInEight[i]]] if j == 1])
-
-
-                # if colifInEight[i] == 0 and colifInEight[i+1] == 1:
-                #     print('A')
-                #     sol.append('A')
-                # if colifInEight[i] == 1 and colifInEight[i + 1] == 2:
-                #     print('B')
-                #     sol.append('B')
-                # if colifInEight[i] == 2 and colifInEight[i + 1] == 3:
-                #     print('B')
-                #     sol.append('B')
-                # if colifInEight[i] == 1 and colifInEight[i + 1] == 2:
-                #     print('B')
-                #     sol.append('B')
-
-
-
-                # for a,b in zip(tableoftruth[colifInEight[i]],tableoftruth[colifInEight[i+1]]):
-                #     print(a,b)
-                # print(i)
-                # print([row[i] for row in list(zip(tableoftruth[colifInEight[i]],tableoftruth[colifInEight[i+1]]))])
-
-                    # print([x == y and x == 1 for x,y in zip(a,b)])
-                    # bool.append(first+second)
-
-
-                    # print(set.intersection(*map(set, bool)))
 
             print()
         return testsol
@@ -219,27 +162,7 @@ else:
                 for t in tempArray:
                     temp2.append(testsol[t])
                 listAfterEights.append(temp2)
-            # for j in range(0,len([row[index] for row in testsol]),4):
-            #     aad.append([row[index] for row in testsol][j:j+4])
 
-                # if len(colifInEight) >= len(rowifInEight):
-                #     # print(testsol[index][qf][0:2])
-                #
-                #     # for j in [row for row in testsol[index][qf][0:2]]:
-                #     #     print(j)
-                # else:
-                #     print('ROWS')
-        # for index in range(0,len(testsol),4):
-        #     print()
-        #     print(testsol[index:index+4])
-        #     for j in [row for row in testsol]:
-        #         print(j)
-        # for index in range(0, 4):
-        #     print(testsol[index:index + 4])
-        #     for indexa, j in enumerate([row[index] for row in testsol]):
-        #         print(indexa,j)
-        #         if [row[index] for row in testsol].count(j) == 8:
-        #             print('found', testsol[index:index+7])
     print('THIS IS THE SOLUTION FOR EIGHTS', sol)
     pprint('This is the test solution from truthTable')
     pprint(testsol)
@@ -266,7 +189,7 @@ else:
         for indexOfArray, item in enumerate(listSolution):
             # print(item)
             if sol == []:
-                print('no octaves')
+
                 arrayRem = arrayRem + [0,1,2,3]
                 break
             for s in sol:
@@ -316,7 +239,6 @@ else:
                     for indexOfRow,arrayRow, in enumerate([row[index] for row in tableoftruth]):
                         if arrayRow != r:
                                 if arrayRow[2:4] == r[2:4]:
-                                    print('row    ', arrayRow, r)
                                     if (arrayRow in remList):
                                         print('row in remList   ', arrayRow, r,)
                                         f.append(arrayRow)
@@ -330,11 +252,6 @@ else:
                             af.append([ia,a[ia]])
                 print(countf)
                 if countf.count(4) >= 2:
-                    # for c in range(len(countf)):
-                    #     print(countf[c])
-                    #     if countf[c] == 4:
-                    #         listOfFoursCheckAlpabet.append([f[c][c], c])
-
                     print('print accepted', f)
                     listOfFoursCheckAlpabet.append(af)
                     print(listOfFoursCheckAlpabet)
@@ -415,36 +332,7 @@ else:
         else:
             return []
 
-
-
-
-
-
-
-
-            # print(neighbours(arrayForFours[i][1], arrayForFours[i][0], listSolution))
-            # if len(colifInEight) >= 2:
-            #     if index in arrayRem:
-            #         print([int(row[index]) for row in listSolution])
-            #         isZeroColumn = len([i for i in [int(row[index]) for row in listSolution] if i == 0])
-            #
-            # elif len(rowifInEight) >= 2:
-            #     if index in arrayRem:
-            #         print(eachList)
-            # if index in arrayRem:
-            #     print([int(row[index]) for row in listSolution])
-            #     print(eachList)
-            #
-            #
-            #     for indexOfEachList,each in enumerate(eachList):
-            #         if each == 1 and indexOfEachList in arrayRem:
-            #             # if (all_same([int(row[index]) for row in listSolution])):
-            #             #
-            #             # print(a)
-            #             print(each, eachList, [int(row[index]) for row in listSolution],  indexOfEachList, index)
-
     listAfterFours = ifInFour(listOfFoursCheckAlpabet)
-
     print('This is the actual Fours ALMOST WORKS')
     pprint(actualFours)
     pprint(listAfterFours)
